@@ -2,9 +2,9 @@
   box-sizing: border-box;
 } */
 
-body {
+.body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 /* Style the side navigation */
