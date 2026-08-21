@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px "Geologica";
+  color: #fffffa;
+  background-color: #455A44;
+  margin: auto
+}
+
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  color: #fffffa;
+  transition: color 0.3s linear;
+   -webkit-transition: color 0.3s linear;
+   -moz-transition: color 0.3s linear;
+}
+
+a:hover {
+  color: #F4CD96;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.grid-container {
+  /* display, grid-template-areas, gap */
+    display: grid;
+    grid-template-areas:
+      'header'
+      'menu'
+      'main'
+      'footer';
+    gap: 16px;
+  /* background-color: #496348; */
+  padding-top: 100px;
+}
+
+.header {
+  grid-area: header; 
+  /* background-color: #9E4B32; */
+  color: #fffffa; 
+ font-size: 48px;
+  font-weight:bold;
+  text-transform: lowercase;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.menu { 
+  grid-area: menu;
+  text-align: center;
+  text-transform: lowercase;
+  font-weight: bold;
+  padding-left: 0px;
+  padding-right: 64px;
+  font-weight:black;
+  font-size:24px;
+}
+
+.menu ul{
+  list-style-type: none;
+}
+
+/* .menu li{
+  padding: 0.2em;
+} */
+
+.menu a{
+  color: #fffffa;
+  text-decoration:none;
+  transition: color 0.3s linear;
+   -webkit-transition: color 0.3s linear;
+   -moz-transition: color 0.3s linear;
+}
+
+.menu a:hover {
+  color: #F4CD96;
+  /* text-decoration: underline; */
+  text-underline-offset: 0.2em;
+}
+
+.content {
+  grid-area: main; 
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 128px;
+}
+
+p {
+  font: 16px;
+  line-height: 150%; 
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height:100%; 
+  padding-top: 24px;
+  color: #BACAB9;
+}
+
+.footer { 
+  grid-area: footer; 
+  /* background-color: #0099cc;  */
+  color: white; 
+  text-align: center; 
+  padding: 10px; 
+}
+
+@media (max-width: 768px) {
+  .header {grid-area: 1 / 1 / span 1 / span 6; text-align: center; padding-bottom:0px; }
+  .header h1{line-height: 64px;}
+  .menu {grid-area: 2 / 1 / span 1 / span 6; padding-top: 0px;}
+  .content {grid-area: 3 / span 6;}
+  .footer {grid-area: 4 / span 6;}
+  .grid-container {padding-top: 16px;}
+}
+
+
+@media (min-width: 768px) {
+  .header {grid-area: 2 / 3 / span 1 / span 1; text-align:left; padding-top: 16px;}
+  .menu {grid-area: 2 / 2 / span 5 / span 1; padding-top: 4px;}
+  .content {grid-area: 3 / 3 / span 4 / span 1;}
+  .footer {grid-area: 6 / 1 / span 1 / span 4;}
+}
