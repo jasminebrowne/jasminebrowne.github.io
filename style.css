@@ -136,7 +136,7 @@ code {
 
 @media (min-width: 768px) {
   .header {grid-area: 2 / 3 / span 1 / span 1; text-align:left; padding-top: 12px;}
-  .menu {grid-area: 2 / 2 / span 5 / span 1; padding-top:1px; padding-right: 64px;}
+  .menu {grid-area: 2 / 2 / span 5 / span 1; padding-top:31px; padding-right: 64px;}
   .content {grid-area: 3 / 3 / span 4 / span 1; padding-right: 64px}
   .footer {grid-area: 6 / 1 / span 1 / span 4;}
 }
