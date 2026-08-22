@@ -35,20 +35,23 @@ a:hover {
       'menu'
       'main'
       'footer';
-    gap: 16px;
+    gap: 4px;
   /* background-color: #496348; */
-  padding-top: 100px;
+  padding-top: 64px;
 }
 
 .header {
   grid-area: header; 
   /* background-color: #9E4B32; */
+  padding-bottom: 0px
+}
+
+.header h1 {
   color: #fffffa; 
- font-size: 48px;
+  font-size: 48px;
   font-weight:bold;
   text-transform: lowercase;
-  padding-left: 8px;
-  padding-right: 8px;
+  vertical-align: bottom;
 }
 
 .menu { 
@@ -56,8 +59,6 @@ a:hover {
   text-align: center;
   text-transform: lowercase;
   font-weight: bold;
-  padding-left: 0px;
-  padding-right: 64px;
   font-weight:black;
   font-size:24px;
 }
@@ -86,21 +87,28 @@ a:hover {
 
 .content {
   grid-area: main; 
-  padding-left: 8px;
-  padding-right: 8px;
   padding-bottom: 128px;
 }
 
-p {
-  font: 16px;
-  line-height: 150%; 
+.content p {
+  font-size: 16px;
+  font-weight: Extra-Light;
+  line-height: 150%;
 }
 
-h1 {
+.content b {
+  font-weight: black;
+}
+
+code {
+  font-size: 14px;
+}
+
+.content h2 {
   font-size: 24px;
   font-weight: bold;
   line-height:100%; 
-  padding-top: 24px;
+  padding-top: 36px;
   color: #BACAB9;
 }
 
@@ -112,19 +120,20 @@ h1 {
   padding: 10px; 
 }
 
-@media (max-width: 768px) {
-  .header {grid-area: 1 / 1 / span 1 / span 6; text-align: center; padding-bottom:0px; }
-  .header h1{line-height: 64px;}
-  .menu {grid-area: 2 / 1 / span 1 / span 6; padding-top: 0px;}
-  .content {grid-area: 3 / span 6;}
+@media (max-width: 767px) {
+  .header {grid-area: 1 / 1 / span 1 / span 6; text-align: center; padding-bottom:0px;}
+  /* .header h1{line-height: 64px;} */
+  .menu {grid-area: 2 / 1 / span 1 / span 6; padding-top: 0px; padding-left: 0px; padding-right: 40px;}
+  .content {grid-area: 3 / span 6; padding-left: 16px; padding-right: 16px;padding-top: 15px;}
   .footer {grid-area: 4 / span 6;}
   .grid-container {padding-top: 16px;}
 }
 
 
 @media (min-width: 768px) {
-  .header {grid-area: 2 / 3 / span 1 / span 1; text-align:left; padding-top: 16px;}
-  .menu {grid-area: 2 / 2 / span 5 / span 1; padding-top: 4px;}
-  .content {grid-area: 3 / 3 / span 4 / span 1;}
+  .header {grid-area: 2 / 3 / span 1 / span 1; text-align:left; padding-top: 12px;}
+  .header h1{line-height: 0px;}
+  .menu {grid-area: 2 / 2 / span 5 / span 1; padding-top:1px; padding-right: 64px;}
+  .content {grid-area: 3 / 3 / span 4 / span 1; padding-right: 64px}
   .footer {grid-area: 6 / 1 / span 1 / span 4;}
 }
